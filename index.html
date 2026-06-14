@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="dark">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔐 Text Cipher - 텍스트 암호화/복호화</title>
+    <title> Text Cipher - 텍스트 암호화/복호화</title>
     <meta name="description" content="다양한 고전 암호화 기법으로 텍스트를 암호화하고 복호화하세요">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -617,6 +617,192 @@
             color: var(--text-muted);
             margin-top: 4px;
         }
+    
+
+        /* Minimal light interface override */
+        :root, [data-theme="light"] {
+            --bg-primary: #f7f8f8;
+            --bg-secondary: #f0f2f2;
+            --bg-tertiary: #e7ebeb;
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --bg-input: #eef0f1;
+            --text-primary: #111416;
+            --text-secondary: #4f5b61;
+            --text-muted: #7b878c;
+            --accent: #0f766e;
+            --accent-primary: #0f766e;
+            --accent-secondary: #0f766e;
+            --accent-light: #0f766e;
+            --accent-glow: rgba(15, 118, 110, 0.08);
+            --success: #157f3b;
+            --warning: #9a6700;
+            --danger: #b42318;
+            --error: #b42318;
+            --border: #d9dedf;
+            --border-color: #d9dedf;
+            --border-hover: #b8c2c6;
+            --shadow: 0 1px 2px rgba(17, 20, 22, 0.06);
+            --shadow-card: 0 1px 2px rgba(17, 20, 22, 0.06);
+            --gradient-accent: none;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #101314;
+            --bg-secondary: #171b1d;
+            --bg-tertiary: #202628;
+            --bg-card: rgba(24, 28, 30, 0.92);
+            --bg-input: #202628;
+            --text-primary: #f2f4f4;
+            --text-secondary: #b4bdc1;
+            --text-muted: #7f8b91;
+            --accent: #72d6c9;
+            --accent-primary: #72d6c9;
+            --accent-secondary: #72d6c9;
+            --accent-light: #72d6c9;
+            --accent-glow: rgba(114, 214, 201, 0.08);
+            --success: #8bd39a;
+            --warning: #e0b85f;
+            --danger: #ffb4ab;
+            --error: #ffb4ab;
+            --border: #30383c;
+            --border-color: #30383c;
+            --border-hover: #465156;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.28);
+            --gradient-accent: none;
+        }
+
+        body {
+            background: var(--bg-primary) !important;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        body::before, .logo-icon, .upload-icon, .drop-overlay-icon, .icon:empty, .card-header-icon, .result-icon {
+            display: none !important;
+        }
+
+        .container {
+            max-width: 1120px;
+            padding: 28px 18px;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 22px;
+            padding-top: 0;
+        }
+
+        h1, .logo h1 {
+            color: var(--text-primary) !important;
+            background: none !important;
+            -webkit-text-fill-color: currentColor !important;
+            font-size: clamp(1.45rem, 3vw, 2.05rem) !important;
+            font-weight: 600 !important;
+            letter-spacing: 0 !important;
+            text-shadow: none !important;
+        }
+
+        .subtitle, .logo span {
+            color: var(--text-secondary) !important;
+            font-size: 0.86rem !important;
+            max-width: 620px;
+            margin-left: 0;
+        }
+
+        .theme-toggle, #theme-toggle, #themeToggle {
+            min-width: 64px;
+            min-height: 34px;
+            width: auto !important;
+            height: 34px !important;
+            border-radius: 8px !important;
+            padding: 0 10px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color, var(--border)) !important;
+            color: var(--text-secondary) !important;
+            box-shadow: none !important;
+            transform: none !important;
+            font-size: 0.78rem !important;
+        }
+
+        .card, .panel, .section, .input-panel, .output-panel, .preview-panel,
+        .control-panel, .controls-panel, .options-panel, .settings-panel,
+        .editor-panel, .preview-section, .tool-panel, .qr-card,
+        .generator-card, .scanner-card, .info-section, .stats-panel,
+        .practice-area, .performance-chart, .tips-section, .stat-item,
+        .drop-zone, .upload-zone, .batch-item, .history-item {
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color, var(--border)) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 1px 2px rgba(17, 20, 22, 0.06) !important;
+        }
+
+        .card-header, .panel-header, .section-header, .preview-header {
+            padding: 13px 16px !important;
+            border-bottom: 1px solid var(--border-color, var(--border)) !important;
+        }
+
+        .card-body, .panel-body, .section-body, .controls-panel, .preview-section {
+            padding: 16px !important;
+        }
+
+        button, .btn, .button, .tab, .data-type, .preview-tab,
+        .share-btn, .reset-stats-btn, .retry-btn, .reserve-btn,
+        .download-btn, .action-btn, .copy-btn, .panel-btn {
+            border-radius: 8px !important;
+            box-shadow: none !important;
+            background-image: none !important;
+            transform: none !important;
+            transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+        }
+
+        .btn-accent, .btn-primary, .btn-success,
+        .tab.active, .data-type.active, .preview-tab.active,
+        .reserve-btn:not(:disabled), .download-btn, .action-btn.primary {
+            background: var(--accent-primary, var(--accent)) !important;
+            border-color: var(--accent-primary, var(--accent)) !important;
+            color: #fff !important;
+        }
+
+        input, textarea, select, .editor, .preview, .output,
+        .input-area, .output-area, .format-select {
+            background: var(--bg-input, var(--bg-secondary)) !important;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--border-color, var(--border)) !important;
+            border-radius: 8px !important;
+        }
+
+        input[type="range"] {
+            accent-color: var(--accent-primary, var(--accent));
+        }
+
+        .drop-zone, .upload-zone {
+            padding: 42px 22px !important;
+            border-style: dashed !important;
+        }
+
+        .section-title, .panel-title, .card-title, .controls-title, h2, h3 {
+            color: var(--text-primary) !important;
+            letter-spacing: 0 !important;
+        }
+
+        footer {
+            color: var(--text-muted) !important;
+            padding: 22px !important;
+            font-size: 0.78rem !important;
+        }
+
+        @media (max-width: 600px) {
+            .action-buttons, .button-group, .controls, .tab-container {
+                flex-wrap: wrap !important;
+            }
+
+            .action-buttons .btn, .button-group .btn {
+                flex: 1 1 100% !important;
+                width: 100% !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -625,22 +811,22 @@
     <div class="container">
         <header>
             <div class="logo">
-                <span class="logo-icon">🔐</span>
+                <span class="logo-icon"></span>
                 <div>
                     <h1>TEXT CIPHER</h1>
                     <span>암호화 & 복호화 도구</span>
                 </div>
             </div>
             <div class="header-controls">
-                <button class="btn" id="themeToggle">☀️</button>
+                <button class="btn" id="themeToggle">Light</button>
             </div>
         </header>
 
         <!-- Tabs -->
         <div class="tabs">
-            <button class="tab active" data-tab="cipher">🔐 암호화</button>
-            <button class="tab" data-tab="game">🧩 암호 풀기</button>
-            <button class="tab" data-tab="analysis">📊 분석</button>
+            <button class="tab active" data-tab="cipher"> 암호화</button>
+            <button class="tab" data-tab="game"> 암호 풀기</button>
+            <button class="tab" data-tab="analysis"> 분석</button>
         </div>
 
         <!-- Cipher Section -->
@@ -649,7 +835,7 @@
                 <!-- Input Panel -->
                 <div class="panel">
                     <div class="panel-header">
-                        <div class="panel-title">📝 입력 텍스트</div>
+                        <div class="panel-title"> 입력 텍스트</div>
                         <button class="btn" id="clearInput">지우기</button>
                     </div>
                     <div class="textarea-wrapper">
@@ -661,11 +847,11 @@
                 <!-- Output Panel -->
                 <div class="panel">
                     <div class="panel-header">
-                        <div class="panel-title">🔒 결과</div>
-                        <button class="btn" id="swapBtn">↔️ 교체</button>
+                        <div class="panel-title"> 결과</div>
+                        <button class="btn" id="swapBtn">↔ 교체</button>
                     </div>
                     <div class="result-display encrypted" id="outputText">
-                        <button class="btn copy-btn" id="copyBtn">📋 복사</button>
+                        <button class="btn copy-btn" id="copyBtn"> 복사</button>
                         <span id="resultContent">결과가 여기에 표시됩니다...</span>
                     </div>
                 </div>
@@ -677,7 +863,7 @@
                     <div class="control-group">
                         <label class="control-label">암호화 방식</label>
                         <select id="cipherType">
-                            <optgroup label="📜 고전 암호">
+                            <optgroup label=" 고전 암호">
                                 <option value="caesar">시저 암호 (Caesar Cipher)</option>
                                 <option value="rot13">ROT13</option>
                                 <option value="vigenere">비즈네르 암호 (Vigenère)</option>
@@ -685,23 +871,23 @@
                                 <option value="atbash">아트배시 (Atbash)</option>
                                 <option value="reverse">역순 (Reverse)</option>
                             </optgroup>
-                            <optgroup label="🔐 현대 암호화">
+                            <optgroup label=" 현대 암호화">
                                 <option value="aes">AES-256 암호화</option>
                                 <option value="xor">XOR 암호화</option>
                             </optgroup>
-                            <optgroup label="📝 인코딩">
+                            <optgroup label=" 인코딩">
                                 <option value="base64">Base64</option>
                                 <option value="hex">16진수 (Hex)</option>
                                 <option value="binary">2진수 (Binary)</option>
                                 <option value="url">URL 인코딩</option>
                                 <option value="unicode">유니코드 이스케이프</option>
                             </optgroup>
-                            <optgroup label="🔧 난독화">
+                            <optgroup label=" 난독화">
                                 <option value="morse">모스 부호</option>
                                 <option value="leetspeak">리트스피크 (1337)</option>
                                 <option value="zerowidth">제로폭 문자 숨김</option>
                             </optgroup>
-                            <optgroup label="🔍 해시 (단방향)">
+                            <optgroup label=" 해시 (단방향)">
                                 <option value="sha256">SHA-256 해시</option>
                                 <option value="md5">MD5 해시</option>
                             </optgroup>
@@ -721,15 +907,15 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button class="btn btn-accent" id="encryptBtn">🔒 암호화</button>
-                    <button class="btn" id="decryptBtn">🔓 복호화</button>
-                    <button class="btn" id="randomKeyBtn">🎲 랜덤 키</button>
+                    <button class="btn btn-accent" id="encryptBtn"> 암호화</button>
+                    <button class="btn" id="decryptBtn"> 복호화</button>
+                    <button class="btn" id="randomKeyBtn"> 랜덤 키</button>
                 </div>
             </div>
 
             <!-- Cipher Info -->
             <div class="cipher-info" id="cipherInfo">
-                <h4>💡 시저 암호 (Caesar Cipher)</h4>
+                <h4> 시저 암호 (Caesar Cipher)</h4>
                 <p>각 문자를 알파벳에서 일정한 거리만큼 이동시키는 고대 암호화 방식입니다. 줄리어스 시저가 사용했다고 알려져 있습니다.</p>
             </div>
 
@@ -774,8 +960,8 @@
                 </div>
 
                 <div style="margin-top: 2rem;">
-                    <button class="btn" id="skipBtn">⏭️ 건너뛰기</button>
-                    <button class="btn" id="hintBtn">💡 힌트</button>
+                    <button class="btn" id="skipBtn">⏭ 건너뛰기</button>
+                    <button class="btn" id="hintBtn"> 힌트</button>
                 </div>
             </div>
         </section>
@@ -784,7 +970,7 @@
         <section id="analysisSection" class="game-section">
             <div class="panel">
                 <div class="panel-header">
-                    <div class="panel-title">📊 문자 빈도 분석</div>
+                    <div class="panel-title"> 문자 빈도 분석</div>
                 </div>
                 <div class="textarea-wrapper">
                     <textarea id="analysisInput" placeholder="분석할 텍스트를 입력하세요..."></textarea>
@@ -794,7 +980,7 @@
                 <div id="analysisResult" style="margin-top: 1.5rem;">
                     <h4 style="color: var(--accent); margin-bottom: 1rem;">알파벳 빈도</h4>
                     <div class="analysis-grid" id="freqChart"></div>
-                    
+
                     <div style="margin-top: 2rem;">
                         <h4 style="color: var(--accent); margin-bottom: 0.5rem;">영어 표준 빈도 비교</h4>
                         <p style="font-size: 0.85rem; color: var(--text-secondary);">
@@ -811,7 +997,7 @@
     </div>
 
     <div class="toast" id="toast">
-        <span id="toastIcon">✅</span>
+        <span id="toastIcon"></span>
         <span id="toastMessage">복사되었습니다!</span>
     </div>
 
@@ -853,7 +1039,7 @@
                     if (!key) key = 'KEY';
                     key = key.toUpperCase().replace(/[^A-Z]/g, '');
                     if (key.length === 0) key = 'KEY';
-                    
+
                     let keyIndex = 0;
                     return text.replace(/[a-zA-Z]/g, (char) => {
                         const base = char <= 'Z' ? 65 : 97;
@@ -866,7 +1052,7 @@
                     if (!key) key = 'KEY';
                     key = key.toUpperCase().replace(/[^A-Z]/g, '');
                     if (key.length === 0) key = 'KEY';
-                    
+
                     let keyIndex = 0;
                     return text.replace(/[a-zA-Z]/g, (char) => {
                         const base = char <= 'Z' ? 65 : 97;
@@ -886,7 +1072,7 @@
                 encrypt: (text, key) => {
                     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     key = (key || '').toUpperCase().replace(/[^A-Z]/g, '');
-                    
+
                     // Generate substitution alphabet from key
                     let subAlphabet = '';
                     for (let c of key) {
@@ -895,7 +1081,7 @@
                     for (let c of alphabet) {
                         if (!subAlphabet.includes(c)) subAlphabet += c;
                     }
-                    
+
                     return text.replace(/[a-zA-Z]/g, (char) => {
                         const upper = char === char.toUpperCase();
                         const index = alphabet.indexOf(char.toUpperCase());
@@ -906,7 +1092,7 @@
                 decrypt: (text, key) => {
                     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     key = (key || '').toUpperCase().replace(/[^A-Z]/g, '');
-                    
+
                     let subAlphabet = '';
                     for (let c of key) {
                         if (!subAlphabet.includes(c)) subAlphabet += c;
@@ -914,7 +1100,7 @@
                     for (let c of alphabet) {
                         if (!subAlphabet.includes(c)) subAlphabet += c;
                     }
-                    
+
                     return text.replace(/[a-zA-Z]/g, (char) => {
                         const upper = char === char.toUpperCase();
                         const index = subAlphabet.indexOf(char.toUpperCase());
@@ -954,7 +1140,7 @@
             },
 
             // === 현대 암호화 ===
-            
+
             // AES-256 (using Web Crypto API)
             aes: {
                 encrypt: async (text, key) => {
@@ -965,7 +1151,7 @@
                         }
                         const encoder = new TextEncoder();
                         const data = encoder.encode(text);
-                        
+
                         // Derive key from password
                         const keyMaterial = await crypto.subtle.importKey(
                             'raw', encoder.encode(key), 'PBKDF2', false, ['deriveBits', 'deriveKey']
@@ -975,12 +1161,12 @@
                             { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
                             keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['encrypt']
                         );
-                        
+
                         const iv = crypto.getRandomValues(new Uint8Array(12));
                         const encrypted = await crypto.subtle.encrypt(
                             { name: 'AES-GCM', iv }, aesKey, data
                         );
-                        
+
                         // Combine IV + encrypted data and encode as base64
                         const combined = new Uint8Array(iv.length + encrypted.byteLength);
                         combined.set(iv);
@@ -995,11 +1181,11 @@
                         if (!key) return '키를 입력하세요';
                         const encoder = new TextEncoder();
                         const decoder = new TextDecoder();
-                        
+
                         const combined = Uint8Array.from(atob(text), c => c.charCodeAt(0));
                         const iv = combined.slice(0, 12);
                         const data = combined.slice(12);
-                        
+
                         const keyMaterial = await crypto.subtle.importKey(
                             'raw', encoder.encode(key), 'PBKDF2', false, ['deriveBits', 'deriveKey']
                         );
@@ -1008,7 +1194,7 @@
                             { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
                             keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
                         );
-                        
+
                         const decrypted = await crypto.subtle.decrypt(
                             { name: 'AES-GCM', iv }, aesKey, data
                         );
@@ -1056,7 +1242,7 @@
             },
 
             // === 인코딩 ===
-            
+
             // Base64
             base64: {
                 encrypt: (text) => {
@@ -1138,7 +1324,7 @@
                 },
                 decrypt: (text) => {
                     try {
-                        return text.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => 
+                        return text.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) =>
                             String.fromCharCode(parseInt(hex, 16))
                         );
                     } catch (e) {
@@ -1152,7 +1338,7 @@
             },
 
             // === 난독화 ===
-            
+
             // Morse Code
             morse: {
                 encrypt: (text) => {
@@ -1164,8 +1350,8 @@
                         'Y': '-.--', 'Z': '--..', '0': '-----', '1': '.----', '2': '..---',
                         '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
                         '8': '---..', '9': '----.', ' ': '/', '.': '.-.-.-', ',': '--..--',
-                        '?': '..--..', '!': '-.-.--', "'": '.----.', '"': '.-..-.', 
-                        '(': '-.--.', ')': '-.--.-', ':': '---...', ';': '-.-.-.', 
+                        '?': '..--..', '!': '-.-.--', "'": '.----.', '"': '.-..-.',
+                        '(': '-.--.', ')': '-.--.-', ':': '---...', ';': '-.-.-.',
                         '=': '-...-', '+': '.-.-.', '-': '-....-', '/': '-..-.', '@': '.--.-.'
                     };
                     return text.toUpperCase().split('').map(c => morseMap[c] || c).join(' ');
@@ -1213,7 +1399,7 @@
                     const zwc = { '0': '\u200B', '1': '\u200C' }; // Zero-width space, zero-width non-joiner
                     const binary = [...text].map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join('');
                     const hidden = binary.split('').map(b => zwc[b]).join('');
-                    return '👀 이 텍스트에 숨겨진 메시지가 있습니다 ' + hidden + ' 👀';
+                    return ' 이 텍스트에 숨겨진 메시지가 있습니다 ' + hidden + ' ';
                 },
                 decrypt: (text) => {
                     try {
@@ -1232,7 +1418,7 @@
             },
 
             // === 해시 (단방향) ===
-            
+
             // SHA-256
             sha256: {
                 encrypt: async (text) => {
@@ -1241,7 +1427,7 @@
                     const hash = await crypto.subtle.digest('SHA-256', data);
                     return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
                 },
-                decrypt: () => '⚠️ 해시는 단방향 함수로 복호화가 불가능합니다',
+                decrypt: () => ' 해시는 단방향 함수로 복호화가 불가능합니다',
                 info: {
                     title: 'SHA-256 해시',
                     desc: '256비트 암호학적 해시 함수입니다. 비밀번호 저장, 데이터 무결성 검증, 블록체인 등에 사용됩니다.'
@@ -1265,7 +1451,7 @@
                         return Array.from(new Uint8Array(buf)).slice(0, 16).map(b => b.toString(16).padStart(2, '0')).join('');
                     });
                 },
-                decrypt: () => '⚠️ 해시는 단방향 함수로 복호화가 불가능합니다',
+                decrypt: () => ' 해시는 단방향 함수로 복호화가 불가능합니다',
                 info: {
                     title: 'MD5 해시',
                     desc: '128비트 해시 함수입니다. 현재는 보안 목적으로 권장되지 않지만, 체크섬 용도로 여전히 사용됩니다.'
@@ -1294,7 +1480,7 @@
 
         function copyKeyToClipboard(key, type) {
             navigator.clipboard.writeText(key).then(() => {
-                showToast('🔑', `${type} 키가 생성되어 클립보드에 복사되었습니다!`);
+                showToast('', `${type} 키가 생성되어 클립보드에 복사되었습니다!`);
                 // Also show in the key input field
                 document.getElementById('cipherKey').value = key;
             });
@@ -1332,7 +1518,7 @@
 
         // Theme
         function initTheme() {
-            const saved = localStorage.getItem('cipher-theme') || 'dark';
+            const saved = localStorage.getItem('cipher-theme') || 'light';
             document.documentElement.setAttribute('data-theme', saved);
             updateThemeBtn(saved);
         }
@@ -1346,21 +1532,21 @@
         }
 
         function updateThemeBtn(theme) {
-            document.getElementById('themeToggle').textContent = theme === 'dark' ? '☀️' : '🌙';
+            document.getElementById('themeToggle').textContent = theme === 'dark' ? 'Dark' : 'Light';
         }
 
         // Matrix Background
         function initMatrixBg() {
             const bg = document.getElementById('matrixBg');
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
-            
+
             for (let i = 0; i < 20; i++) {
                 const column = document.createElement('div');
                 column.className = 'matrix-column';
                 column.style.left = `${Math.random() * 100}%`;
                 column.style.animationDuration = `${10 + Math.random() * 20}s`;
                 column.style.animationDelay = `${Math.random() * 10}s`;
-                
+
                 let text = '';
                 for (let j = 0; j < 50; j++) {
                     text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
@@ -1379,11 +1565,11 @@
 
             // Update info
             const info = Ciphers[type].info;
-            cipherInfo.innerHTML = `<h4>💡 ${info.title}</h4><p>${info.desc}</p>`;
+            cipherInfo.innerHTML = `<h4> ${info.title}</h4><p>${info.desc}</p>`;
 
             // Ciphers that don't need key input
             const noKeyTypes = ['rot13', 'atbash', 'reverse', 'base64', 'hex', 'binary', 'url', 'unicode', 'morse', 'leetspeak', 'sha256', 'md5'];
-            
+
             // Show/hide key input
             if (type === 'caesar') {
                 keyGroup.style.display = 'none';
@@ -1394,7 +1580,7 @@
             } else {
                 keyGroup.style.display = 'block';
                 shiftGroup.style.display = 'none';
-                
+
                 if (type === 'vigenere') {
                     cipherKey.placeholder = '키워드 (예: SECRET)';
                 } else if (type === 'substitution') {
@@ -1416,7 +1602,7 @@
             const display = document.getElementById('alphabetDisplay');
             const type = cipherType.value;
             const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            
+
             if (type === 'caesar' || type === 'rot13') {
                 const shift = type === 'rot13' ? 13 : parseInt(shiftSlider.value);
                 display.innerHTML = alphabet.split('').map(letter => {
@@ -1443,7 +1629,7 @@
                 for (let c of alphabet) {
                     if (!subAlphabet.includes(c)) subAlphabet += c;
                 }
-                
+
                 display.innerHTML = alphabet.split('').map((letter, i) => {
                     return `<div class="alphabet-letter">
                         <span class="original">${letter}</span>
@@ -1459,13 +1645,13 @@
         async function encrypt() {
             const text = inputText.value;
             if (!text) {
-                showToast('⚠️', '텍스트를 입력하세요');
+                showToast('', '텍스트를 입력하세요');
                 return;
             }
-            
+
             const type = cipherType.value;
             let key = type === 'caesar' ? shiftSlider.value : cipherKey.value;
-            
+
             try {
                 outputText.textContent = '처리 중...';
                 const result = await Ciphers[type].encrypt(text, key);
@@ -1479,13 +1665,13 @@
         async function decrypt() {
             const text = inputText.value;
             if (!text) {
-                showToast('⚠️', '텍스트를 입력하세요');
+                showToast('', '텍스트를 입력하세요');
                 return;
             }
-            
+
             const type = cipherType.value;
             let key = type === 'caesar' ? shiftSlider.value : cipherKey.value;
-            
+
             try {
                 outputText.textContent = '처리 중...';
                 const result = await Ciphers[type].decrypt(text, key);
@@ -1499,7 +1685,7 @@
         function generateRandomKey() {
             const type = cipherType.value;
             let key = '';
-            
+
             if (type === 'caesar') {
                 const shift = Math.floor(Math.random() * 25) + 1;
                 shiftSlider.value = shift;
@@ -1507,13 +1693,13 @@
                 key = shift.toString();
                 updateAlphabetDisplay();
                 navigator.clipboard.writeText(key);
-                showToast('🎲', `시프트 값 ${key}가 클립보드에 복사되었습니다!`);
+                showToast('', `시프트 값 ${key}가 클립보드에 복사되었습니다!`);
             } else if (type === 'vigenere') {
                 const words = ['SECRET', 'CIPHER', 'CRYPTO', 'ENCODE', 'PUZZLE', 'MYSTIC', 'SHADOW', 'HIDDEN', 'MATRIX', 'ENIGMA'];
                 key = words[Math.floor(Math.random() * words.length)];
                 cipherKey.value = key;
                 navigator.clipboard.writeText(key);
-                showToast('🔑', `키 "${key}"가 클립보드에 복사되었습니다!`);
+                showToast('', `키 "${key}"가 클립보드에 복사되었습니다!`);
             } else if (type === 'substitution') {
                 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
                 for (let i = alphabet.length - 1; i > 0; i--) {
@@ -1524,19 +1710,19 @@
                 cipherKey.value = key;
                 navigator.clipboard.writeText(key);
                 updateAlphabetDisplay();
-                showToast('🔑', '치환 키가 클립보드에 복사되었습니다!');
+                showToast('', '치환 키가 클립보드에 복사되었습니다!');
             } else if (type === 'aes') {
                 key = generateAESKey();
                 cipherKey.value = key;
                 navigator.clipboard.writeText(key);
-                showToast('🔐', 'AES-256 키가 클립보드에 복사되었습니다!');
+                showToast('', 'AES-256 키가 클립보드에 복사되었습니다!');
             } else if (type === 'xor') {
                 key = generateRandomString(16);
                 cipherKey.value = key;
                 navigator.clipboard.writeText(key);
-                showToast('🔑', 'XOR 키가 클립보드에 복사되었습니다!');
+                showToast('', 'XOR 키가 클립보드에 복사되었습니다!');
             } else {
-                showToast('ℹ️', '이 암호화 방식은 키가 필요하지 않습니다');
+                showToast('ℹ', '이 암호화 방식은 키가 필요하지 않습니다');
             }
         }
 
@@ -1558,9 +1744,9 @@
 
             // Increase difficulty with level
             if (gameState.level >= 3) {
-                cipherTypes.push({ 
-                    type: 'vigenere', 
-                    name: '비즈네르 암호', 
+                cipherTypes.push({
+                    type: 'vigenere',
+                    name: '비즈네르 암호',
                     getKey: () => ['KEY', 'CODE', 'CIPHER'][Math.floor(Math.random() * 3)]
                 });
             }
@@ -1580,7 +1766,7 @@
             };
 
             document.getElementById('gameCipher').textContent = encrypted;
-            
+
             let hint = `암호 방식: ${cipherChoice.name}`;
             if (cipherChoice.type === 'caesar' && gameState.hintsUsed > 0) {
                 hint += ` (시프트: ${key})`;
@@ -1602,7 +1788,7 @@
                 gameState.correct++;
                 gameState.streak++;
                 gameState.score += 10 * gameState.level + gameState.streak * 2;
-                
+
                 if (gameState.streak > gameState.bestStreak) {
                     gameState.bestStreak = gameState.streak;
                 }
@@ -1611,7 +1797,7 @@
                     gameState.level++;
                 }
 
-                document.getElementById('gameFeedback').textContent = '🎉 정답입니다!';
+                document.getElementById('gameFeedback').textContent = ' 정답입니다!';
                 document.getElementById('gameFeedback').className = 'game-feedback correct';
 
                 updateGameUI();
@@ -1620,7 +1806,7 @@
                 setTimeout(generatePuzzle, 1500);
             } else {
                 gameState.streak = 0;
-                document.getElementById('gameFeedback').textContent = '❌ 틀렸습니다. 다시 시도해보세요!';
+                document.getElementById('gameFeedback').textContent = ' 틀렸습니다. 다시 시도해보세요!';
                 document.getElementById('gameFeedback').className = 'game-feedback wrong';
                 updateGameUI();
             }
@@ -1630,24 +1816,24 @@
             gameState.hintsUsed++;
             const puzzle = gameState.currentPuzzle;
             let hint = `암호 방식: ${puzzle.typeName}`;
-            
+
             if (puzzle.type === 'caesar') {
                 hint += ` | 시프트: ${puzzle.key}`;
             } else if (puzzle.type === 'vigenere') {
                 hint += ` | 키: ${puzzle.key}`;
             }
-            
+
             if (gameState.hintsUsed >= 2) {
                 hint += ` | 첫 글자: ${puzzle.original[0]}`;
             }
-            
+
             document.getElementById('gameHint').textContent = hint;
-            showToast('💡', '힌트가 표시되었습니다!');
+            showToast('', '힌트가 표시되었습니다!');
         }
 
         function skipPuzzle() {
             gameState.streak = 0;
-            showToast('⏭️', `정답: ${gameState.currentPuzzle.original}`);
+            showToast('⏭', `정답: ${gameState.currentPuzzle.original}`);
             updateGameUI();
             setTimeout(generatePuzzle, 2000);
         }
@@ -1696,7 +1882,7 @@
 
             const chart = document.getElementById('freqChart');
             const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            
+
             let maxFreq = 0;
             for (let c of alphabet) {
                 if (freq[c] > maxFreq) maxFreq = freq[c];
@@ -1706,7 +1892,7 @@
                 const count = freq[letter] || 0;
                 const height = maxFreq > 0 ? (count / maxFreq) * 60 : 0;
                 const percent = total > 0 ? ((count / total) * 100).toFixed(1) : 0;
-                
+
                 return `<div class="freq-bar" title="${letter}: ${count} (${percent}%)">
                     <div class="freq-bar-fill" style="height: ${height}px;"></div>
                     <span class="freq-bar-label">${letter}</span>
@@ -1726,7 +1912,7 @@
                     tab.classList.add('active');
 
                     const tabName = tab.dataset.tab;
-                    document.getElementById('cipherSection').style.display = 
+                    document.getElementById('cipherSection').style.display =
                         tabName === 'cipher' ? 'block' : 'none';
                     document.getElementById('gameSection').classList.toggle('active', tabName === 'game');
                     document.getElementById('analysisSection').classList.toggle('active', tabName === 'analysis');
@@ -1764,7 +1950,7 @@
                 const text = outputText.textContent;
                 if (text && text !== '결과가 여기에 표시됩니다...') {
                     navigator.clipboard.writeText(text);
-                    showToast('📋', '클립보드에 복사되었습니다!');
+                    showToast('', '클립보드에 복사되었습니다!');
                 }
             });
 
@@ -1800,4 +1986,3 @@
     </script>
 </body>
 </html>
-
