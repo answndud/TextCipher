@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
 
-        :root {
+        [data-theme="light"] {
             --bg-primary: #f0f2f5;
             --bg-secondary: #ffffff;
             --bg-card: #ffffff;
@@ -620,7 +620,7 @@
     
 
         /* Minimal light interface override */
-        :root, :root {
+        :root, [data-theme="light"] {
             --bg-primary: #f7f8f8;
             --bg-secondary: #f0f2f2;
             --bg-tertiary: #e7ebeb;
@@ -646,7 +646,33 @@
             --gradient-accent: none;
         }
 
-body {
+        [data-theme="dark"] {
+            --bg-primary: #101314;
+            --bg-secondary: #171b1d;
+            --bg-tertiary: #202628;
+            --bg-card: rgba(24, 28, 30, 0.92);
+            --bg-input: #202628;
+            --text-primary: #f2f4f4;
+            --text-secondary: #b4bdc1;
+            --text-muted: #7f8b91;
+            --accent: #72d6c9;
+            --accent-primary: #72d6c9;
+            --accent-secondary: #72d6c9;
+            --accent-light: #72d6c9;
+            --accent-glow: rgba(114, 214, 201, 0.08);
+            --success: #8bd39a;
+            --warning: #e0b85f;
+            --danger: #ffb4ab;
+            --error: #ffb4ab;
+            --border: #30383c;
+            --border-color: #30383c;
+            --border-hover: #465156;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.28);
+            --gradient-accent: none;
+        }
+
+        body {
             background: var(--bg-primary) !important;
             color: var(--text-primary);
             line-height: 1.5;
@@ -684,7 +710,22 @@ body {
             margin-left: 0;
         }
 
-.card, .panel, .section, .input-panel, .output-panel, .preview-panel,
+        .theme-toggle, #theme-toggle, #themeToggle {
+            min-width: 64px;
+            min-height: 34px;
+            width: auto !important;
+            height: 34px !important;
+            border-radius: 8px !important;
+            padding: 0 10px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color, var(--border)) !important;
+            color: var(--text-secondary) !important;
+            box-shadow: none !important;
+            transform: none !important;
+            font-size: 0.78rem !important;
+        }
+
+        .card, .panel, .section, .input-panel, .output-panel, .preview-panel,
         .control-panel, .controls-panel, .options-panel, .settings-panel,
         .editor-panel, .preview-section, .tool-panel, .qr-card,
         .generator-card, .scanner-card, .info-section, .stats-panel,
@@ -765,7 +806,32 @@ body {
     </style>
     <!-- Minimal sharp visual system -->
     <style id="minimal-sharp-theme">
-html, body {
+        :root, [data-theme="light"], [data-theme="dark"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #ffffff;
+            --bg-input: #ffffff;
+            --bg: #ffffff;
+            --panel: #ffffff;
+            --panel-strong: #ffffff;
+            --preview-bg: #ffffff;
+            --accent: #D2E0E5;
+            --accent-primary: #D2E0E5;
+            --accent-secondary: #D2E0E5;
+            --accent-light: #D2E0E5;
+            --accent-strong: #D2E0E5;
+            --accent-dim: #D2E0E5;
+            --primary: #D2E0E5;
+            --primary-color: #D2E0E5;
+            --gradient-accent: none;
+            --gradient-1: none;
+            --gradient-2: none;
+            --gradient-3: none;
+        }
+
+        html, body {
             background: #ffffff !important;
         }
 
@@ -790,7 +856,42 @@ html, body {
     </style>
     <!-- Rational project palette -->
     <style id="rational-project-palette">
-html, body {
+        :root, [data-theme="light"], [data-theme="dark"] {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F6F4F8;
+            --bg-tertiary: #F6F4F8;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F6F4F8;
+            --bg-input: #F0EDF4;
+            --bg: #FFFFFF;
+            --panel: #FFFFFF;
+            --panel-strong: #F6F4F8;
+            --preview-bg: #F6F4F8;
+            --text-primary: #28232F;
+            --text-secondary: #746C7D;
+            --text-muted: #746C7D;
+            --border: #DED9E5;
+            --border-color: #DED9E5;
+            --border-hover: #796D91;
+            --accent: #796D91;
+            --accent-primary: #796D91;
+            --accent-secondary: #5D5175;
+            --accent-light: #F6F4F8;
+            --accent-strong: #5D5175;
+            --accent-dim: #F6F4F8;
+            --primary: #796D91;
+            --primary-color: #796D91;
+            --success: #4D8065;
+            --warning: #A3793B;
+            --danger: #A65A61;
+            --error: #A65A61;
+            --gradient-accent: none;
+            --gradient-1: none;
+            --gradient-2: none;
+            --gradient-3: none;
+        }
+
+        html, body {
             background: #FFFFFF !important;
             color: #28232F !important;
         }
@@ -813,7 +914,42 @@ html, body {
     </style>
     <!-- MarkdownPreview shared visual system -->
     <style id="markdown-preview-theme">
-html, body {
+        :root, [data-theme="light"], [data-theme="dark"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --bg-tertiary: #f6f8fa;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f6f8fa;
+            --bg-editor: #ffffff;
+            --bg-input: #f6f8fa;
+            --bg: #ffffff;
+            --panel: #ffffff;
+            --panel-strong: #f6f8fa;
+            --preview-bg: #f6f8fa;
+            --accent: #0969da;
+            --accent-primary: #0969da;
+            --accent-secondary: #0550ae;
+            --accent-light: #f6f8fa;
+            --accent-strong: #0550ae;
+            --primary: #0969da;
+            --primary-color: #0969da;
+            --text-primary: #24292f;
+            --text-secondary: #57606a;
+            --text-muted: #8c959f;
+            --border: #d0d7de;
+            --border-color: #d0d7de;
+            --border-hover: #0969da;
+            --code-bg: #f6f8fa;
+            --blockquote-border: #0969da;
+            --link-color: #0969da;
+            --table-border: #d0d7de;
+            --table-alt-bg: #f6f8fa;
+            --gradient-accent: linear-gradient(135deg, #0969da 0%, #0550ae 100%);
+            --shadow: 0 1px 2px rgba(27, 31, 36, 0.08);
+            --shadow-card: 0 1px 2px rgba(27, 31, 36, 0.08);
+        }
+
+        html, body {
             background: #ffffff !important;
             color: #24292f !important;
         }
@@ -884,6 +1020,7 @@ html, body {
                 </div>
             </div>
             <div class="header-controls">
+                <button class="btn" id="themeToggle">Light</button>
             </div>
         </header>
 
@@ -1573,12 +1710,32 @@ html, body {
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
             initMatrixBg();
             updateCipherUI();
             loadGameStats();
             generatePuzzle();
             setupEventListeners();
         });
+
+        // Theme
+        function initTheme() {
+            const saved = localStorage.getItem('cipher-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+            updateThemeBtn(saved);
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('cipher-theme', next);
+            updateThemeBtn(next);
+        }
+
+        function updateThemeBtn(theme) {
+            document.getElementById('themeToggle').textContent = theme === 'dark' ? 'Dark' : 'Light';
+        }
 
         // Matrix Background
         function initMatrixBg() {
@@ -1947,6 +2104,9 @@ html, body {
 
         // Event Listeners
         function setupEventListeners() {
+            // Theme
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
             // Tabs
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
