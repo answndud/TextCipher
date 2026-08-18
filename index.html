@@ -854,6 +854,64 @@
             border-color: #101416 !important;
         }
     </style>
+    <!-- Rational project palette -->
+    <style id="rational-project-palette">
+        :root, [data-theme="light"], [data-theme="dark"] {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F6F4F8;
+            --bg-tertiary: #F6F4F8;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F6F4F8;
+            --bg-input: #F0EDF4;
+            --bg: #FFFFFF;
+            --panel: #FFFFFF;
+            --panel-strong: #F6F4F8;
+            --preview-bg: #F6F4F8;
+            --text-primary: #28232F;
+            --text-secondary: #746C7D;
+            --text-muted: #746C7D;
+            --border: #DED9E5;
+            --border-color: #DED9E5;
+            --border-hover: #796D91;
+            --accent: #796D91;
+            --accent-primary: #796D91;
+            --accent-secondary: #5D5175;
+            --accent-light: #F6F4F8;
+            --accent-strong: #5D5175;
+            --accent-dim: #F6F4F8;
+            --primary: #796D91;
+            --primary-color: #796D91;
+            --success: #4D8065;
+            --warning: #A3793B;
+            --danger: #A65A61;
+            --error: #A65A61;
+            --gradient-accent: none;
+            --gradient-1: none;
+            --gradient-2: none;
+            --gradient-3: none;
+        }
+
+        html, body {
+            background: #FFFFFF !important;
+            color: #28232F !important;
+        }
+
+        button, .button, .btn, .action-btn, .primary,
+        input[type="submit"], input[type="button"] {
+            background: var(--accent) !important;
+            background-image: none !important;
+            color: #28232F !important;
+            border-color: var(--accent) !important;
+            box-shadow: none !important;
+        }
+
+        button:hover, .button:hover, .btn:hover, .action-btn:hover,
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background: var(--accent-strong) !important;
+            border-color: var(--accent-strong) !important;
+            color: #FFFFFF !important;
+        }
+    </style>
 </head>
 <body>
     <div class="matrix-bg" id="matrixBg"></div>
