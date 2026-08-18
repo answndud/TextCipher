@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="light">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,30 +17,15 @@
             --text-primary: #e0e0e8;
             --text-secondary: #8888a0;
             --text-muted: #555566;
-            --accent: #00ff88;
-            --accent-dim: #00cc6a;
-            --accent-glow: rgba(0, 255, 136, 0.3);
-            --secondary: #ff6b9d;
-            --tertiary: #6b5bff;
+            --accent: #1769aa;
+            --accent-dim: #0d4f86;
+            --accent-glow: rgba(23, 105, 170, 0.12);
+            --secondary: #3b82c4;
+            --tertiary: #0d4f86;
             --warning: #ffcc00;
             --danger: #ff4444;
             --border: rgba(0, 255, 136, 0.15);
             --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-
-        [data-theme="light"] {
-            --bg-primary: #f0f2f5;
-            --bg-secondary: #ffffff;
-            --bg-card: #ffffff;
-            --bg-input: #f5f7fa;
-            --text-primary: #1a1a2e;
-            --text-secondary: #555580;
-            --text-muted: #999aaa;
-            --accent: #00aa55;
-            --accent-dim: #008844;
-            --accent-glow: rgba(0, 170, 85, 0.2);
-            --border: rgba(0, 170, 85, 0.2);
-            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -55,33 +40,6 @@
             color: var(--text-primary);
             min-height: 100vh;
             transition: background 0.3s, color 0.3s;
-        }
-
-        /* Matrix Background */
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            opacity: 0.03;
-        }
-
-        .matrix-column {
-            position: absolute;
-            top: -100%;
-            font-size: 14px;
-            line-height: 1.2;
-            color: var(--accent);
-            animation: matrixFall linear infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes matrixFall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(200vh); }
         }
 
         .container {
@@ -122,11 +80,6 @@
         .logo span {
             font-size: 0.85rem;
             color: var(--text-secondary);
-        }
-
-        .header-controls {
-            display: flex;
-            gap: 0.75rem;
         }
 
         .btn {
@@ -620,7 +573,7 @@
     
 
         /* Minimal light interface override */
-        :root, [data-theme="light"] {
+        :root {
             --bg-primary: #f7f8f8;
             --bg-secondary: #f0f2f2;
             --bg-tertiary: #e7ebeb;
@@ -629,46 +582,20 @@
             --text-primary: #111416;
             --text-secondary: #4f5b61;
             --text-muted: #7b878c;
-            --accent: #0f766e;
-            --accent-primary: #0f766e;
-            --accent-secondary: #0f766e;
-            --accent-light: #0f766e;
-            --accent-glow: rgba(15, 118, 110, 0.08);
-            --success: #157f3b;
+            --accent: #1769aa;
+            --accent-primary: #1769aa;
+            --accent-secondary: #0d4f86;
+            --accent-light: #3b82c4;
+            --accent-glow: rgba(23, 105, 170, 0.08);
+            --success: #1769aa;
             --warning: #9a6700;
             --danger: #b42318;
             --error: #b42318;
             --border: #d9dedf;
             --border-color: #d9dedf;
             --border-hover: #b8c2c6;
-            --shadow: 0 1px 2px rgba(17, 20, 22, 0.06);
-            --shadow-card: 0 1px 2px rgba(17, 20, 22, 0.06);
-            --gradient-accent: none;
-        }
-
-        [data-theme="dark"] {
-            --bg-primary: #101314;
-            --bg-secondary: #171b1d;
-            --bg-tertiary: #202628;
-            --bg-card: rgba(24, 28, 30, 0.92);
-            --bg-input: #202628;
-            --text-primary: #f2f4f4;
-            --text-secondary: #b4bdc1;
-            --text-muted: #7f8b91;
-            --accent: #72d6c9;
-            --accent-primary: #72d6c9;
-            --accent-secondary: #72d6c9;
-            --accent-light: #72d6c9;
-            --accent-glow: rgba(114, 214, 201, 0.08);
-            --success: #8bd39a;
-            --warning: #e0b85f;
-            --danger: #ffb4ab;
-            --error: #ffb4ab;
-            --border: #30383c;
-            --border-color: #30383c;
-            --border-hover: #465156;
-            --shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
-            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.28);
+            --shadow: none;
+            --shadow-card: none;
             --gradient-accent: none;
         }
 
@@ -708,21 +635,6 @@
             font-size: 0.86rem !important;
             max-width: 620px;
             margin-left: 0;
-        }
-
-        .theme-toggle, #theme-toggle, #themeToggle {
-            min-width: 64px;
-            min-height: 34px;
-            width: auto !important;
-            height: 34px !important;
-            border-radius: 8px !important;
-            padding: 0 10px !important;
-            background: var(--bg-card) !important;
-            border: 1px solid var(--border-color, var(--border)) !important;
-            color: var(--text-secondary) !important;
-            box-shadow: none !important;
-            transform: none !important;
-            font-size: 0.78rem !important;
         }
 
         .card, .panel, .section, .input-panel, .output-panel, .preview-panel,
@@ -803,11 +715,177 @@
             }
         }
 
+        /* Shared sharp light interface */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f3f5f5;
+            --bg-card: #ffffff;
+            --bg-input: #f3f5f5;
+            --text-primary: #111516;
+            --text-secondary: #4b5659;
+            --text-muted: #778285;
+            --accent: #1769aa;
+            --accent-dim: #0d4f86;
+            --accent-light: #3b82c4;
+            --accent-glow: rgba(23, 105, 170, 0.12);
+            --secondary: #3b82c4;
+            --tertiary: #0d4f86;
+            --success: #1769aa;
+            --border: #c8d0d1;
+            --border-color: #c8d0d1;
+            --border-hover: #1769aa;
+            --shadow: none;
+            --shadow-card: none;
+        }
+
+        html,
+        body,
+        body *,
+        body *::before,
+        body *::after {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        body {
+            background: #ffffff !important;
+        }
+
+        .container {
+            max-width: 1350px;
+        }
+
+        .logo-icon {
+            filter: none !important;
+            color: var(--accent-primary) !important;
+        }
+
+        .logo h1,
+        .panel-title,
+        .game-score,
+        .stat-value,
+        .result-display.encrypted,
+        .cipher-info h4,
+        .game-feedback.correct,
+        footer a {
+            color: var(--accent-primary) !important;
+            text-shadow: none !important;
+        }
+
+        .btn,
+        .tab,
+        input,
+        select,
+        textarea,
+        .panel,
+        .controls,
+        .game-card,
+        .game-cipher,
+        .result-display,
+        .cipher-info,
+        .alphabet-letter,
+        .toast {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .btn,
+        .tab {
+            background-image: none !important;
+            transform: none !important;
+            transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-primary) !important;
+        }
+
+        .btn-accent,
+        .tab.active {
+            background: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            color: #ffffff !important;
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-secondary) !important;
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0;
+            max-width: 560px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            padding: 0;
+        }
+
+        .tab {
+            width: 100%;
+            min-width: 0;
+            min-height: 44px;
+            height: 44px;
+            padding: 0 1rem;
+            border: 0 !important;
+        }
+
+        .main-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        .main-grid > .panel {
+            min-width: 0;
+            height: 100%;
+            padding: 1.5rem;
+        }
+
+        .panel-header {
+            border-bottom-color: var(--border);
+        }
+
+        textarea:focus,
+        input:focus,
+        select:focus {
+            border-color: var(--accent-primary) !important;
+            box-shadow: none !important;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            border-radius: 0 !important;
+            background: var(--accent-primary);
+        }
+
+        .controls,
+        .cipher-info,
+        .game-card,
+        .panel {
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border) !important;
+        }
+
+        .game-cipher,
+        .result-display,
+        .cipher-info,
+        .alphabet-letter,
+        .controls input,
+        .controls select,
+        .controls textarea {
+            background: var(--bg-input) !important;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="matrix-bg" id="matrixBg"></div>
-
     <div class="container">
         <header>
             <div class="logo">
@@ -816,9 +894,6 @@
                     <h1>TEXT CIPHER</h1>
                     <span>암호화 & 복호화 도구</span>
                 </div>
-            </div>
-            <div class="header-controls">
-                <button class="btn" id="themeToggle">Light</button>
             </div>
         </header>
 
@@ -1508,53 +1583,11 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            initMatrixBg();
             updateCipherUI();
             loadGameStats();
             generatePuzzle();
             setupEventListeners();
         });
-
-        // Theme
-        function initTheme() {
-            const saved = localStorage.getItem('cipher-theme') || 'light';
-            document.documentElement.setAttribute('data-theme', saved);
-            updateThemeBtn(saved);
-        }
-
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('cipher-theme', next);
-            updateThemeBtn(next);
-        }
-
-        function updateThemeBtn(theme) {
-            document.getElementById('themeToggle').textContent = theme === 'dark' ? 'Dark' : 'Light';
-        }
-
-        // Matrix Background
-        function initMatrixBg() {
-            const bg = document.getElementById('matrixBg');
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
-
-            for (let i = 0; i < 20; i++) {
-                const column = document.createElement('div');
-                column.className = 'matrix-column';
-                column.style.left = `${Math.random() * 100}%`;
-                column.style.animationDuration = `${10 + Math.random() * 20}s`;
-                column.style.animationDelay = `${Math.random() * 10}s`;
-
-                let text = '';
-                for (let j = 0; j < 50; j++) {
-                    text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
-                }
-                column.innerHTML = text;
-                bg.appendChild(column);
-            }
-        }
 
         // Update UI based on cipher type
         function updateCipherUI() {
@@ -1902,9 +1935,6 @@
 
         // Event Listeners
         function setupEventListeners() {
-            // Theme
-            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-
             // Tabs
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
